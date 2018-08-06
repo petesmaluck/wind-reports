@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## To run program
 
-Use node version 10.3.0.
-npm install
-ng serve
+- Use node version 10.3.0.
+- npm install
+- ng serve
 
 ## Development server
 
