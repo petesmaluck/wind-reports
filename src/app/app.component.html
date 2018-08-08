@@ -14,7 +14,7 @@
         <th>Current (MPS)</th>
         <th>Avg (MPS)</th>
       </tr>
-      <tr *ngFor="let icaoCode of airportWindData">
+      <tr *ngFor="let icaoCode of airports">
         <td width="20px">{{icaoCode}}</td>
         <td width="50px">{{dataOperation.getCurrentSpeed(airportDataByIcaoCode[icaoCode]) | number}}</td>
         <td width="50px">{{dataOperation.getAverageSpeed(airportDataByIcaoCode[icaoCode]) | number}}</td>

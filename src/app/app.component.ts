@@ -4,8 +4,8 @@ import { DataGeneratorService } from './services/data-generator.service';
 import { DataParserService } from './services/data-parser.service';
 import { CalculationsService } from './services/calculations.service';
 
-import { Observable, fromEvent } from 'rxjs';
-import { mergeMap, tap, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map, mergeMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   airportsFormattedDataArray = [];
   airportDataByIcaoCode: Object;
   objectKeys = Object.keys;
-  airportWindData: any;
+  airports: Array<string>;
   dataPollInterval = 700;
 
   constructor(
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
         this.airportDataByIcaoCode = this.dataParser.groupDataByKey(this.airportsFormattedDataArray, 'icao_code');
         
         // Get list of airports
-        this.airportWindData = Object.keys(this.airportDataByIcaoCode);
+        this.airports = Object.keys(this.airportDataByIcaoCode);
       });
   }
 }
